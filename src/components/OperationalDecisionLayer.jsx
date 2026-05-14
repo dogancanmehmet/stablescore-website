@@ -3,88 +3,82 @@ import { Database, Search, AlertTriangle, Lightbulb, GitPullRequest, ShieldCheck
 const layers = [
   {
     icon: Database,
-    name: 'Data Layer',
-    description: 'ERP, CRM, WMS, spreadsheets, operational databases and internal systems.',
-    color: 'bg-blue-500/10 text-blue-600',
+    name: 'Data',
+    description: 'ERP, CRM, WMS, spreadsheets, databases.',
+    color: 'bg-blue-500 text-white',
+    bg: 'bg-blue-50 border-blue-100',
   },
   {
     icon: Search,
-    name: 'Discovery Layer',
-    description: 'Finds KPIs, anomalies, operational patterns and decision signals.',
-    color: 'bg-indigo-500/10 text-indigo-600',
+    name: 'Discovery',
+    description: 'Finds KPIs, anomalies, patterns.',
+    color: 'bg-indigo-500 text-white',
+    bg: 'bg-indigo-50 border-indigo-100',
   },
   {
     icon: AlertTriangle,
-    name: 'Predictive Layer',
-    description: 'Detects operational risks, deviations and future exposure.',
-    color: 'bg-amber-500/10 text-amber-600',
+    name: 'Predictive',
+    description: 'Detects risks and deviations.',
+    color: 'bg-amber-500 text-white',
+    bg: 'bg-amber-50 border-amber-100',
   },
   {
     icon: Lightbulb,
-    name: 'Decision Layer',
-    description: 'Generates explainable recommendations and prioritizes operational actions.',
-    color: 'bg-accent/10 text-accent',
+    name: 'Decision',
+    description: 'Explainable recommendations.',
+    color: 'bg-accent text-white',
+    bg: 'bg-accent/5 border-accent/20',
   },
   {
     icon: GitPullRequest,
-    name: 'Workflow Layer',
-    description: 'Supports approvals, operational follow-up and business workflows.',
-    color: 'bg-emerald-500/10 text-emerald-600',
+    name: 'Workflow',
+    description: 'Approvals and follow-up.',
+    color: 'bg-emerald-500 text-white',
+    bg: 'bg-emerald-50 border-emerald-100',
   },
   {
     icon: ShieldCheck,
-    name: 'Trust Layer',
-    description: 'Explainability, traceability, human review and controlled decision support.',
-    color: 'bg-navy-900/10 text-navy-900',
+    name: 'Trust',
+    description: 'Explainability and human review.',
+    color: 'bg-navy-900 text-white',
+    bg: 'bg-gray-50 border-gray-200',
   },
 ];
 
 export default function OperationalDecisionLayer() {
   return (
-    <section className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
+    <section className="w-full bg-white py-20 md:py-28 relative overflow-hidden">
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.03] blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="max-w-2xl mb-16">
           <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Architecture</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-            The Operational Decision Layer
+          <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 leading-[1.1] mb-4">
+            Six layers. One decision system.
           </h2>
           <p className="text-lg text-muted leading-relaxed">
-            Most companies already have dashboards, reports and AI tools. What they lack is a continuous decision layer that turns operational data into explainable actions.
+            Most companies have dashboards and AI tools. What they lack is a continuous decision layer.
           </p>
         </div>
 
-        <p className="text-center text-base text-muted leading-relaxed max-w-3xl mx-auto mb-12">
-          StableScore AI connects fragmented operational systems, identifies meaningful signals, explains operational risks and supports teams with recommended next steps.
-        </p>
-
-        <div className="max-w-2xl mx-auto">
-          <div className="relative space-y-4">
-            {/* Vertical connector line */}
-            <div className="absolute left-6 top-8 bottom-8 w-px bg-border hidden sm:block" />
-
-            {layers.map((layer, i) => (
-              <div
-                key={layer.name}
-                className="relative flex items-start gap-4 sm:gap-6 bg-bg-light border border-border rounded-2xl p-5 sm:p-6 hover:shadow-md transition-shadow"
-              >
-                <div className={`w-12 h-12 rounded-xl ${layer.color} flex items-center justify-center flex-shrink-0 z-10`}>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {layers.map((layer, i) => (
+            <div
+              key={layer.name}
+              className={`relative ${layer.bg} border rounded-2xl p-7 hover:shadow-lg transition-all duration-300 group`}
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className={`w-12 h-12 rounded-xl ${layer.color} flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform`}>
                   <layer.icon size={22} strokeWidth={1.5} />
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-1">
-                    <h3 className="text-base font-semibold text-navy-900">{layer.name}</h3>
-                    <span className="text-[10px] font-bold text-muted uppercase tracking-wider">
-                      Layer {i + 1}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted leading-relaxed">{layer.description}</p>
+                <div>
+                  <p className="text-[10px] font-bold text-muted uppercase tracking-widest">Layer {i + 1}</p>
+                  <h3 className="text-lg font-bold text-navy-900">{layer.name}</h3>
                 </div>
               </div>
-            ))}
-          </div>
+              <p className="text-sm text-muted leading-relaxed">{layer.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

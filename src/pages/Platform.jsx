@@ -139,89 +139,76 @@ export default function Platform() {
       </section>
 
       {/* 3. Technical Positioning */}
-      <section id="architecture" className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute top-[20%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-indigo-400/[0.06] blur-[100px] pointer-events-none" />
+      <section id="architecture" className="w-full bg-navy-900 py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute top-[20%] left-[-5%] w-[400px] h-[400px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] rounded-full bg-indigo-400/[0.06] blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">Architecture</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-6">
-                Built for controlled enterprise environments.
-              </h2>
-              <p className="text-base text-gray-300 leading-relaxed">
-                StableScore is designed for organizations that need control over their data, integration depth with existing systems, and explainability in every recommendation.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {technical.map((t) => (
-                <div key={t} className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={16} className="text-accent-light" />
-                  </div>
-                  <span className="text-base text-gray-200 pt-1">{t}</span>
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">Architecture</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.1]">
+              Built for controlled environments.
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {technical.map((t) => (
+              <div key={t} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center mb-4">
+                  <Check size={18} className="text-accent-light" />
                 </div>
-              ))}
-            </div>
+                <p className="text-sm font-medium text-white leading-relaxed">{t}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 4. Controlled Environments */}
-      <section id="security" className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
+      <section id="security" className="w-full bg-white py-20 md:py-28 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.03] blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Control</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
-                Built for controlled operational environments
-              </h2>
-              <p className="text-base text-muted leading-relaxed">
-                Designed for organizations where operational continuity, explainability and data control matter.
-              </p>
-            </div>
-            <div className="space-y-4">
-              {controlledEnvPoints.map((t) => (
-                <div key={t} className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Check size={16} className="text-accent" />
-                  </div>
-                  <span className="text-base text-navy-800 pt-1">{t}</span>
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Control</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 leading-[1.1]">
+              Operational continuity. Data control.
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {controlledEnvPoints.map((t) => (
+              <div key={t} className="bg-bg-light border border-border rounded-2xl p-6 hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                  <Check size={18} className="text-accent" />
                 </div>
-              ))}
-            </div>
+                <p className="text-sm font-semibold text-navy-800 leading-relaxed">{t}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 5. Workflow Layer */}
-      <section id="workflows" className="w-full bg-bg-light py-16 md:py-24">
+      <section id="workflows" className="w-full bg-bg-light py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div>
-              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Workflows</p>
-              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
-                Decision-ready operational workflows
-              </h2>
-              <p className="text-base text-muted leading-relaxed">
-                StableScore AI supports operational teams with decision-ready outputs that can be reviewed, prioritized and integrated into existing workflows.
-              </p>
-            </div>
-            <div className="bg-white border border-border rounded-2xl p-8">
-              <p className="text-xs font-semibold text-navy-900 uppercase tracking-wider mb-4">Supported Workflows</p>
-              <ul className="space-y-3">
-                {workflowExamples.map((w) => (
-                  <li key={w} className="flex items-start gap-3">
-                    <Check size={16} className="text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-navy-800">{w}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Workflows</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-navy-900 leading-[1.1]">
+              Decision-ready workflows.
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {workflowExamples.map((w, i) => (
+              <div key={w} className="bg-white border border-border rounded-2xl p-6 hover:shadow-md transition-shadow text-center">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <span className="text-sm font-bold text-accent">{i + 1}</span>
+                </div>
+                <p className="text-sm font-semibold text-navy-800">{w}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
