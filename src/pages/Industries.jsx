@@ -279,7 +279,7 @@ export default function Industries() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">CASE STUDIES</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Real outcomes by industry.
+              Example applications by industry.
             </h2>
           </div>
 

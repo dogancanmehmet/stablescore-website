@@ -32,11 +32,16 @@ export default function Hero() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-muted">
-              Trusted by operational teams at mid-sized companies across Europe.
+              Built for operational teams at mid-sized companies across Europe.
             </p>
           </div>
 
           <div className="relative">
+            <div className="absolute -top-3 left-4 z-10">
+              <span className="px-2.5 py-1 bg-navy-900 text-white text-[10px] font-medium rounded-md shadow-sm">
+                Example operational cockpit
+              </span>
+            </div>
             <div className="bg-white rounded-xl shadow-2xl border border-border overflow-hidden">
               <div className="flex">
                 <div className="w-56 bg-navy-900 p-4 hidden sm:block">
