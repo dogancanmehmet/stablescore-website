@@ -4,7 +4,6 @@ import ProblemSection from '../components/ProblemSection';
 import SolutionSection from '../components/SolutionSection';
 import SocialProof from '../components/SocialProof';
 import ComparisonSection from '../components/ComparisonSection';
-import PricingTeaser from '../components/PricingTeaser';
 import HowItWorks from '../components/HowItWorks';
 import UseCases from '../components/UseCases';
 import DeploymentTrust from '../components/DeploymentTrust';
@@ -19,7 +18,6 @@ export default function Home() {
       <SolutionSection />
       <SocialProof />
       <ComparisonSection />
-      <PricingTeaser />
       <HowItWorks />
       <UseCases />
       <DeploymentTrust />

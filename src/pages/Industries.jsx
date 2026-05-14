@@ -24,9 +24,7 @@ const industries = [
       'Supplier lead time optimization',
       'Quality defect early warning',
     ],
-    metric: '65% faster purchasing decisions',
-    stat: '65%',
-    statLabel: 'Faster decisions',
+    metric: 'Faster purchasing decisions and reduced shortages',
   },
   {
     icon: Building2,
@@ -39,9 +37,7 @@ const industries = [
       'Expiry risk alerting',
       'Promotional impact planning',
     ],
-    metric: '32% stock-out reduction',
-    stat: '32%',
-    statLabel: 'Stock-out reduction',
+    metric: 'Improved stock availability and reduced waste',
   },
   {
     icon: Landmark,
@@ -54,9 +50,7 @@ const industries = [
       'Manual effort reduction',
       'Audit trail generation',
     ],
-    metric: '70% less manual effort',
-    stat: '70%',
-    statLabel: 'Effort reduction',
+    metric: 'Reduced manual effort and faster compliance cycles',
   },
   {
     icon: Store,
@@ -69,9 +63,7 @@ const industries = [
       'Local demand pattern analysis',
       'Seasonal trend adaptation',
     ],
-    metric: '25% better forecast accuracy',
-    stat: '25%',
-    statLabel: 'Better forecasts',
+    metric: 'Better forecast accuracy and inventory alignment',
   },
   {
     icon: Plane,
@@ -84,9 +76,7 @@ const industries = [
       'Fleet capacity balancing',
       'Carrier performance scoring',
     ],
-    metric: 'Up to 40% delay reduction',
-    stat: '40%',
-    statLabel: 'Delay reduction',
+    metric: 'Improved on-time delivery and fleet efficiency',
   },
   {
     icon: Stethoscope,
@@ -99,9 +89,7 @@ const industries = [
       'Supplier reliability scoring',
       'Regulatory compliance tracking',
     ],
-    metric: '90% critical stock availability',
-    stat: '90%',
-    statLabel: 'Availability',
+    metric: 'Higher critical stock availability and reduced waste',
   },
   {
     icon: FlaskConical,
@@ -114,9 +102,7 @@ const industries = [
       'Regulatory traceability',
       'API shortage prediction',
     ],
-    metric: '50% less batch waste',
-    stat: '50%',
-    statLabel: 'Waste reduction',
+    metric: 'Reduced batch waste and compliance risk',
   },
   {
     icon: Zap,
@@ -129,9 +115,7 @@ const industries = [
       'Vendor consolidation insights',
       'Demand forecasting for parts',
     ],
-    metric: '35% inventory cost savings',
-    stat: '35%',
-    statLabel: 'Cost savings',
+    metric: 'Lower inventory costs and higher uptime',
   },
 ];
 
@@ -139,17 +123,17 @@ const caseStudies = [
   {
     industry: 'FMCG Distribution',
     company: 'Leading European Distributor',
-    result: 'Reduced stock-out exposure by 32% and inventory waste by €1.2M.',
+    result: 'Reduced stock-out exposure and inventory waste through AI-driven demand sensing and automated replenishment recommendations.',
   },
   {
     industry: 'Manufacturing',
     company: 'Mid-Sized Manufacturer',
-    result: 'Accelerated supplier comparison and purchasing decisions by 65%.',
+    result: 'Accelerated supplier comparison and purchasing decisions by embedding procurement intelligence directly into operational workflows.',
   },
   {
     industry: 'Financial Operations',
     company: 'Financial Services Team',
-    result: 'Automated high-volume compliance reviews and reduced manual effort by 70%.',
+    result: 'Automated high-volume compliance reviews and reduced manual effort by surfacing only high-risk items for human review.',
   },
 ];
 
@@ -157,8 +141,11 @@ export default function Industries() {
   return (
     <div className="w-full">
       {/* 1. Hero */}
-      <section id="industries" className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">INDUSTRIES</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
@@ -171,7 +158,7 @@ export default function Industries() {
               to="/demo"
               className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-navy-700 transition-colors mt-8"
             >
-              Book a Demo
+              Request a Demo
               <ArrowRight size={16} />
             </Link>
           </div>
@@ -179,7 +166,7 @@ export default function Industries() {
       </section>
 
       {/* 2. Industries Grid */}
-      <section id="industries-grid" className="w-full bg-bg-light py-16 md:py-24">
+      <section className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
@@ -214,7 +201,6 @@ export default function Industries() {
       {industries.slice(0, 5).map((ind, i) => (
         <section
           key={ind.name}
-          id={ind.name.toLowerCase().replace(/\s+/g, '-')}
           className={`w-full py-16 md:py-24 ${i % 2 === 0 ? 'bg-white' : 'bg-bg-light'}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -257,8 +243,7 @@ export default function Industries() {
                   </div>
                   <div className="bg-bg-light rounded-lg p-5 mb-4">
                     <p className="text-xs text-muted uppercase tracking-wide mb-2">Key Outcome</p>
-                    <p className="text-4xl font-bold text-navy-900">{ind.stat}</p>
-                    <p className="text-sm text-muted mt-1">{ind.statLabel}</p>
+                    <p className="text-base text-navy-900 leading-relaxed">{ind.metric}</p>
                   </div>
                   <div className="space-y-3">
                     {[1, 2, 3].map((n) => (
@@ -278,8 +263,10 @@ export default function Industries() {
       ))}
 
       {/* 4. Case Studies by Industry */}
-      <section id="case-studies" className="w-full bg-navy-900 py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute top-[-10%] left-[30%] w-[400px] h-[400px] rounded-full bg-accent/[0.07] blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">CASE STUDIES</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
@@ -313,7 +300,7 @@ export default function Industries() {
       </section>
 
       {/* 5. Bottom CTA */}
-      <section id="cta" className="w-full bg-white py-16 md:py-24">
+      <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
             See how StableScore fits your industry.
@@ -325,7 +312,7 @@ export default function Industries() {
             to="/demo"
             className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-8 py-3.5 rounded-lg hover:bg-accent-light transition-colors"
           >
-            Book a Demo
+            Request a Demo
             <ArrowRight size={16} />
           </Link>
         </div>

@@ -11,8 +11,8 @@ const articles = [
   {
     date: 'February 28, 2024',
     category: 'Company',
-    title: 'StableScore raises Series A to expand across Europe',
-    excerpt: 'We are excited to announce our Series A funding round, led by top European VCs, to accelerate our mission.',
+    title: 'StableScore expands platform capabilities across Europe',
+    excerpt: 'We are expanding our operational intelligence platform to serve mid-sized companies across European markets.',
   },
   {
     date: 'January 10, 2024',
@@ -23,8 +23,8 @@ const articles = [
   {
     date: 'December 5, 2023',
     category: 'Industry',
-    title: 'How FMCG distributors cut waste by 30% with AI',
-    excerpt: 'A deep dive into how mid-sized distributors are using operational intelligence to reduce inventory waste.',
+    title: 'How FMCG distributors reduce waste with operational intelligence',
+    excerpt: 'A deep dive into how mid-sized distributors are using AI-driven decision intelligence to reduce inventory waste and improve availability.',
   },
   {
     date: 'November 18, 2023',

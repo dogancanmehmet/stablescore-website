@@ -1,55 +1,39 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock, Users, TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
-      {/* Soft gradient blobs */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 bg-accent/10 text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
-              <TrendingUp size={14} />
-              SMB favorite: Average ROI in 30 days
-            </div>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Fix stock problems with AI.
-              <span className="text-accent"> No IT team needed.</span>
+              Act before operational risk becomes revenue loss.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed">
-              StableScore is built for 50-500 employee companies. It reads your ERP data and tells you what, when, and how much to order.
+              StableScore AI connects to ERP and operational data to detect risks, explain root causes, and recommend the next best action — before stock-outs, waste, delays, or missed sales hit your business.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/demo"
                 className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-navy-700 transition-colors"
               >
-                Get Free Demo
+                Request a Demo
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/solutions"
                 className="inline-flex items-center gap-2 border border-border text-navy-800 text-sm font-medium px-6 py-3 rounded-lg hover:bg-bg-light transition-colors"
               >
-                Explore Solutions
+                Explore the Platform
               </Link>
             </div>
-            <div className="mt-6 flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-2">
-                <Clock size={14} className="text-green-500" />
-                <span className="text-xs text-muted">48-hour setup</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users size={14} className="text-green-500" />
-                <span className="text-xs text-muted">200+ SMBs trust us</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp size={14} className="text-green-500" />
-                <span className="text-xs text-muted">Avg. 32% stock savings</span>
-              </div>
-            </div>
+            <p className="mt-6 text-xs text-muted">
+              Trusted by operational teams at mid-sized companies across Europe.
+            </p>
           </div>
 
           <div className="relative">
@@ -89,7 +73,7 @@ export default function Hero() {
                   </div>
                   <div className="grid grid-cols-2 gap-3 mb-4">
                     {[
-                      { label: 'At Risk Revenue', value: '€2.4M', change: '+16% last 30 days', color: 'text-red-500' },
+                      { label: 'At Risk Revenue', value: '€2.4M', change: '+16% vs last 30 days', color: 'text-red-500' },
                       { label: 'Stock-out Risk', value: '215', change: '+23%', color: 'text-red-500' },
                       { label: 'Dead Stock Value', value: '€1.7M', change: '-11%', color: 'text-green-500' },
                       { label: 'Missed Sales (Est.)', value: '€890K', change: '+16%', color: 'text-red-500' },
@@ -102,7 +86,7 @@ export default function Hero() {
                     ))}
                   </div>
                   <div className="bg-bg-light rounded-lg p-3 mb-3">
-                    <p className="text-[10px] text-muted uppercase tracking-wide mb-2">Risk Trend</p>
+                    <p className="text-[10px] text-muted uppercase tracking-wide mb-2">Risk Exposure Over Time</p>
                     <div className="h-16 flex items-end gap-1">
                       {[40, 55, 45, 60, 50, 70, 55, 65, 75, 60, 50, 55].map((h, i) => (
                         <div key={i} className="flex-1 bg-accent/20 rounded-sm" style={{ height: `${h}%` }} />

@@ -3,7 +3,7 @@ import { ArrowRight, Check } from 'lucide-react';
 const benefits = [
   'Personalized platform walkthrough',
   'Q&A with our solutions team',
-  'Custom ROI estimate for your use case',
+  'Custom value assessment for your operations',
   'No commitment required',
 ];
 

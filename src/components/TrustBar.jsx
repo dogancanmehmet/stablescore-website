@@ -1,12 +1,12 @@
-import { Shield, Brain, Puzzle, Zap, Building2, BadgeCheck } from 'lucide-react';
+import { Shield, Brain, Puzzle, Zap, Building2, Server } from 'lucide-react';
 
 const items = [
   { icon: Building2, title: 'Built in Germany', desc: 'Engineered for reliability' },
-  { icon: BadgeCheck, title: 'Enterprise-Grade Security', desc: 'Your data stays yours' },
+  { icon: Shield, title: 'Private Cloud / On-Prem', desc: 'Your data, your control' },
   { icon: Brain, title: 'Explainable AI', desc: 'Transparent by design' },
   { icon: Puzzle, title: 'ERP Compatible', desc: 'Works with your stack' },
-  { icon: Zap, title: '48-Hour Setup', desc: 'Go live in 2 days' },
-  { icon: Shield, title: 'SMB-Friendly Pricing', desc: 'Pay as you grow' },
+  { icon: Zap, title: 'Fast Deployment', desc: 'Go live in weeks' },
+  { icon: Server, title: 'Continuous Monitoring', desc: 'Always-on intelligence' },
 ];
 
 export default function TrustBar() {

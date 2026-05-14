@@ -58,7 +58,7 @@ const milestones = [
   { year: '2021', title: 'Founded in Berlin', desc: 'StableScore AI founded with a mission to democratize operational intelligence.' },
   { year: '2022', title: 'First Enterprise Customers', desc: 'Signed first three mid-market manufacturing and distribution clients.' },
   { year: '2023', title: 'Platform Launch', desc: 'Public launch of the StableScore platform with four core intelligence modules.' },
-  { year: '2024', title: 'Series A & Expansion', desc: 'Raised Series A and expanded into FMCG, financial services, and healthcare.' },
+  { year: '2024', title: 'Platform Expansion', desc: 'Expanded platform capabilities into FMCG, financial services, and healthcare verticals.' },
 ];
 
 export default function About() {
