@@ -70,28 +70,28 @@ const moreCases = [
     industry: 'Retail',
     icon: Store,
     headline: 'Aligned store inventory with local demand patterns.',
-    stat: '25%',
-    statLabel: 'Better forecasts',
+    stat: 'Improved',
+    statLabel: 'Forecast accuracy',
   },
   {
     industry: 'Logistics',
     icon: Plane,
     headline: 'Predicted delays and optimized fleet utilization.',
-    stat: '40%',
-    statLabel: 'Delay reduction',
+    stat: 'Reduced',
+    statLabel: 'Delivery delays',
   },
   {
     industry: 'Healthcare',
     icon: Stethoscope,
     headline: 'Ensured critical supply availability across 8 hospitals.',
-    stat: '90%',
+    stat: 'Increased',
     statLabel: 'Stock availability',
   },
 ];
 
 const testimonials = [
   {
-    quote: 'StableScore replaced weeks of manual analysis with clear, actionable recommendations. Our procurement team now makes decisions in hours, not days.',
+    quote: 'StableScore replaced lengthy manual analysis with clear, actionable recommendations. Our procurement team now makes decisions faster and with more confidence.',
     author: 'Thomas Weber',
     role: 'Head of Procurement',
     company: 'Precision Manufacturer',
@@ -103,7 +103,7 @@ const testimonials = [
     company: 'European Distributor',
   },
   {
-    quote: 'The compliance automation alone saved us hundreds of hours per month. Our team can now focus on strategic work instead of manual reviews.',
+    quote: 'The compliance automation alone saved us significant time each month. Our team can now focus on strategic work instead of manual reviews.',
     author: 'Marcus Chen',
     role: 'COO',
     company: 'Financial Services Firm',
@@ -189,7 +189,7 @@ export default function CaseStudies() {
                       <div className="mt-4 bg-navy-900 rounded-xl p-5">
                         <p className="text-xs text-gray-400 uppercase tracking-wider mb-2">AI Insight</p>
                         <p className="text-sm text-white leading-relaxed">
-                          StableScore identified the issue {i === 0 ? '14 days' : i === 1 ? '3 weeks' : '48 hours'} before traditional reporting.
+                          StableScore identified the issue significantly earlier than traditional reporting.
                         </p>
                       </div>
                     </div>

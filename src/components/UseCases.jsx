@@ -13,17 +13,17 @@ const useCases = [
 const caseStudies = [
   {
     tag: 'FMCG DISTRIBUTION',
-    desc: 'Reduced stock-out exposure by 32% and inventory waste by €1.2M.',
+    desc: 'Identified stock-out exposure and high-waste inventory patterns across distribution data.',
     image: true,
   },
   {
     tag: 'MANUFACTURING',
-    desc: 'Accelerated supplier comparison and purchasing decisions by 65%.',
+    desc: 'Streamlined supplier evaluation and procurement workflows through AI-driven recommendations.',
     image: true,
   },
   {
     tag: 'FINANCIAL OPERATIONS',
-    desc: 'Automated high-volume compliance reviews and reduced manual effort by 70%.',
+    desc: 'Automated high-volume compliance screening, surfacing only high-risk items for human review.',
     image: true,
   },
 ];
@@ -38,7 +38,7 @@ export default function UseCases() {
           <div>
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">USE CASES</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
-              Where companies use StableScore.
+              From operational signals to business decisions.
             </h2>
             <Link to="/solutions" className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors mb-8">
               See all use cases <ArrowRight size={14} />

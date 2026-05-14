@@ -18,9 +18,9 @@ const pillars = [
   {
     icon: Layers,
     title: 'Unified Overview',
-    desc: 'A single pane of glass for your entire operational health. Risk exposure, inventory status, and AI recommendations in one view.',
+    desc: 'An operational risk cockpit that unifies your entire operational health. Risk exposure, inventory status, and AI recommendations with decision context in one view.',
     features: [
-      'Real-time operational health dashboard',
+      'Operational risk cockpit with decision recommendations',
       'Risk exposure scoring and trending',
       'Recommended actions ranked by impact',
       'Custom alerts and notifications',
@@ -34,13 +34,13 @@ const pillars = [
       'Cloud-native microservices architecture',
       'Auto-scaling based on data volume',
       'Sub-second query response times',
-      '99.9% uptime SLA',
+      'Reliable infrastructure for continuous monitoring',
     ],
   },
   {
     icon: Puzzle,
     title: 'Deep Integrations',
-    desc: 'Connect your existing stack in hours, not months. Native connectors for the tools you already use.',
+    desc: 'Rapid integration with existing operational systems through native connectors for the tools you already use.',
     features: [
       'ERP connectors (SAP, Oracle, MS Dynamics)',
       'Warehouse Management Systems',

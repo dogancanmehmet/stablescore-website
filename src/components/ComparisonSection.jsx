@@ -13,7 +13,7 @@ const stablescore = [
   'Unified decision layer across all systems',
   'Continuous AI monitoring with explainable output',
   'Every recommendation includes root-cause context',
-  'One platform, deployed in days, no coding required',
+  'Enterprise-ready deployment without heavy transformation projects',
 ];
 
 export default function ComparisonSection() {
