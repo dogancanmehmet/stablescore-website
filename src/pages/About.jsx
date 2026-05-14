@@ -55,8 +55,23 @@ export default function About() {
         </div>
       </section>
 
-      {/* 2. Mission */}
+      {/* 2. Our Approach */}
       <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
+              Our approach
+            </h2>
+            <p className="text-lg text-muted leading-relaxed">
+              We believe operational companies do not need more dashboards or disconnected AI tools. They need systems that continuously turn operational data into explainable decisions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Mission */}
+      <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Our Mission</p>
@@ -70,7 +85,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 3. What We Build */}
+      {/* 4. What We Build */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -97,7 +112,35 @@ export default function About() {
         </div>
       </section>
 
-      {/* 4. Principles */}
+      {/* 5. Built Around Operational Reality */}
+      <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Reality</p>
+              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
+                Built around operational reality
+              </h2>
+            </div>
+            <div className="space-y-4">
+              {[
+                'ERP-driven operational environments',
+                'Cross-system operational visibility',
+                'Explainable recommendation systems',
+                'Human-in-the-loop operational support',
+                'Decision traceability and trust',
+              ].map((p) => (
+                <div key={p} className="flex items-start gap-3">
+                  <Check size={18} className="text-green-500 flex-shrink-0 mt-1" />
+                  <span className="text-base text-navy-800">{p}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Principles */}
       <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[20%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-indigo-400/[0.06] blur-[100px] pointer-events-none" />
@@ -122,7 +165,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 5. Team */}
+      {/* 7. Team */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -152,7 +195,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 6. Validation */}
+      {/* 8. Validation */}
       <section className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -173,7 +216,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* 7. CTA */}
+      {/* 9. CTA */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">

@@ -167,7 +167,40 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* 2. Industries Grid */}
+      {/* 2. Strategic Framing */}
+      <section className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.03] blur-[100px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
+              Cross-industry decision intelligence
+            </h2>
+            <p className="text-base text-muted leading-relaxed">
+              StableScore AI is designed as a decision intelligence platform for operational environments where timing, visibility and explainable action matter.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. FMCG Positioning */}
+      <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Focus</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
+              Why FMCG distribution is the initial focus
+            </h2>
+            <p className="text-base text-muted leading-relaxed">
+              FMCG distribution combines operational complexity, structured ERP environments and measurable inventory risk, making it a strong beachhead market for decision intelligence systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Industries Grid */}
       <section className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -206,7 +239,7 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* 3. Industry Detail Sections */}
+      {/* 5. Industry Detail Sections */}
       {industries.slice(0, 5).map((ind, i) => (
         <section
           key={ind.name}
@@ -271,7 +304,7 @@ export default function Industries() {
         </section>
       ))}
 
-      {/* 4. Case Studies by Industry */}
+      {/* 6. Case Studies by Industry */}
       <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[-10%] left-[30%] w-[400px] h-[400px] rounded-full bg-accent/[0.07] blur-[120px] pointer-events-none" />
 
@@ -308,7 +341,7 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* 5. Bottom CTA */}
+      {/* 7. Bottom CTA */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">

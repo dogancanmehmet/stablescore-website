@@ -115,7 +115,7 @@ export default function Solutions() {
                 Decision intelligence modules for operational teams.
               </h1>
               <p className="mt-6 text-lg text-muted leading-relaxed">
-                From inventory to procurement, StableScore delivers domain-specific intelligence that turns operational data into clear, explainable, and actionable decisions.
+                StableScore AI modules are designed to identify operational risks, explain contributing signals and support business teams with actionable operational context.
               </p>
               <Link
                 to="/demo"
@@ -262,7 +262,33 @@ export default function Solutions() {
         </section>
       ))}
 
-      {/* 4. How It Works */}
+      {/* 4. New Positioning Sections */}
+      <section className="w-full bg-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+            <div>
+              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Monitoring</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-4">
+                Continuous signal detection
+              </h2>
+              <p className="text-base text-muted leading-relaxed">
+                Monitor operational changes before they impact reporting, planning or revenue.
+              </p>
+            </div>
+            <div>
+              <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Visibility</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-4">
+                Cross-functional operational visibility
+              </h2>
+              <p className="text-base text-muted leading-relaxed">
+                Connect operational insights across inventory, procurement, finance and business operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. How It Works */}
       <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[20%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-indigo-400/[0.06] blur-[100px] pointer-events-none" />
@@ -297,7 +323,7 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* 5. Industries */}
+      {/* 6. Industries */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -325,7 +351,7 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* 6. Comparison Teaser */}
+      {/* 7. Comparison Teaser */}
       <section className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -361,7 +387,7 @@ export default function Solutions() {
         </div>
       </section>
 
-      {/* 7. Bottom CTA */}
+      {/* 8. Bottom CTA */}
       <section className="w-full bg-navy-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">

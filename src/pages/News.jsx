@@ -22,6 +22,41 @@ const articles = [
     title: 'Why private-first AI matters for operational data',
     summary: 'ERP, procurement, inventory and financial data require more than convenience. They require controlled deployment, traceability and trust.',
   },
+  {
+    slug: 'hidden-cost-delayed-decisions',
+    date: 'Draft',
+    category: 'Operational Risk',
+    title: 'The hidden cost of delayed operational decisions',
+    summary: 'By the time a problem appears in standard reporting, lost sales or waste may already have occurred. Continuous decision support changes the timeline.',
+  },
+  {
+    slug: 'erp-not-decision-systems',
+    date: 'Draft',
+    category: 'Decision Intelligence',
+    title: 'ERP systems are not decision systems',
+    summary: 'ERP systems record transactions. Decision intelligence systems interpret signals, explain risks and recommend actions. Both are needed.',
+  },
+  {
+    slug: 'continuous-vs-periodic',
+    date: 'Draft',
+    category: 'Decision Intelligence',
+    title: 'Continuous monitoring vs periodic reporting',
+    summary: 'Periodic reporting shows what happened last month. Continuous monitoring shows what is changing right now and what it means for next week.',
+  },
+  {
+    slug: 'operational-trust-ai',
+    date: 'Draft',
+    category: 'Enterprise AI',
+    title: 'Operational trust in AI systems',
+    summary: 'For operational teams to rely on AI recommendations, they need explainability, traceability and the ability to review and override every suggestion.',
+  },
+  {
+    slug: 'private-first-operational-environments',
+    date: 'Draft',
+    category: 'Data Privacy',
+    title: 'Private-first AI for operational environments',
+    summary: 'Operational data does not belong in public APIs. Private deployment, local processing and controlled access are prerequisites for enterprise AI adoption.',
+  },
 ];
 
 export default function News() {

@@ -2,10 +2,13 @@ import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import ProblemSection from '../components/ProblemSection';
 import SolutionSection from '../components/SolutionSection';
-import SocialProof from '../components/SocialProof';
-import ComparisonSection from '../components/ComparisonSection';
+import OperationalDecisionLayer from '../components/OperationalDecisionLayer';
 import HowItWorks from '../components/HowItWorks';
+import ContinuousDecisionSupport from '../components/ContinuousDecisionSupport';
 import UseCases from '../components/UseCases';
+import ExplainabilitySection from '../components/ExplainabilitySection';
+import WhyEmbedded from '../components/WhyEmbedded';
+import ComparisonSection from '../components/ComparisonSection';
 import DeploymentTrust from '../components/DeploymentTrust';
 import RiskReducers from '../components/RiskReducers';
 
@@ -16,10 +19,13 @@ export default function Home() {
       <TrustBar />
       <ProblemSection />
       <SolutionSection />
-      <SocialProof />
-      <ComparisonSection />
+      <OperationalDecisionLayer />
       <HowItWorks />
+      <ContinuousDecisionSupport />
       <UseCases />
+      <ExplainabilitySection />
+      <WhyEmbedded />
+      <ComparisonSection />
       <DeploymentTrust />
       <RiskReducers />
     </>

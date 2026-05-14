@@ -67,7 +67,22 @@ export default function CaseStudies() {
         </div>
       </section>
 
-      {/* 2. Disclaimer */}
+      {/* 2. Operational Signals Section */}
+      <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
+              From operational signals to explainable actions
+            </h2>
+            <p className="text-base text-muted leading-relaxed">
+              StableScore AI helps organizations move from fragmented reporting and delayed reactions to continuous operational visibility and decision support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Disclaimer */}
       <section className="w-full bg-bg-light py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs text-muted">
