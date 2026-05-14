@@ -169,20 +169,20 @@ export default function Platform() {
               {
                 icon: Cloud,
                 title: 'SaaS',
-                desc: 'Fully managed cloud deployment. Get started quickly with zero infrastructure overhead.',
-                features: ['Automatic updates', 'Managed backups', 'Global availability', 'Pay-as-you-grow'],
+                desc: 'Managed cloud deployment with controlled access, secure backups and scalable usage.',
+                features: ['Managed updates', 'Secure backups', 'Controlled access', 'Scalable usage'],
               },
               {
                 icon: Server,
                 title: 'Private Cloud',
-                desc: 'Dedicated cloud environment on AWS, Azure, or GCP with isolated resources and custom configurations.',
-                features: ['Isolated tenant', 'Custom VPC', 'Dedicated support', 'Flexible SLAs'],
+                desc: 'Isolated cloud environment with custom network setup and security-oriented configuration.',
+                features: ['Isolated environment', 'Custom network setup', 'Deployment support', 'Security-oriented configuration'],
               },
               {
                 icon: Lock,
                 title: 'On-Premise',
-                desc: 'Deploy StableScore inside your own data center for maximum control and regulatory compliance.',
-                features: ['Air-gapped option', 'Full data sovereignty', 'Custom compliance', 'Local support'],
+                desc: 'Local deployment inside your infrastructure for data sovereignty and restricted network control.',
+                features: ['Data sovereignty', 'Local deployment', 'Restricted network option', 'Custom compliance setup'],
               },
             ].map((d) => (
               <div

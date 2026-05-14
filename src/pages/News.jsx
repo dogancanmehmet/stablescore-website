@@ -69,8 +69,8 @@ export default function News() {
                 <p className="text-sm text-muted leading-relaxed mb-4">
                   {article.summary}
                 </p>
-                <span className="inline-flex items-center gap-1 text-sm font-medium text-accent hover:text-accent-light transition-colors">
-                  Read more <ArrowRight size={14} />
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium text-muted uppercase tracking-wider">
+                  Coming soon
                 </span>
               </article>
             ))}
