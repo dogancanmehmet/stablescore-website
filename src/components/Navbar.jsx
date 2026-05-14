@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
-  { label: 'Platform', to: '/platform', hasDropdown: true },
-  { label: 'Solutions', to: '/solutions', hasDropdown: true },
-  { label: 'Industries', to: '/industries', hasDropdown: true },
-  { label: 'Case Studies', to: '/case-studies', hasDropdown: true },
-  { label: 'About', to: '/about', hasDropdown: true },
-  { label: 'Contact', to: '/contact', hasDropdown: true },
+  { label: 'Platform', to: '/platform' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Industries', to: '/industries' },
+  { label: 'Case Studies', to: '/case-studies' },
+  { label: 'About', to: '/about' },
 ];
 
 export default function Navbar() {
@@ -37,27 +36,29 @@ export default function Navbar() {
                 key={link.label}
                 to={link.to}
                 className={({ isActive }) =>
-                  `flex items-center gap-1 text-sm font-medium transition-colors ${
+                  `text-sm font-medium transition-colors ${
                     isActive ? 'text-accent' : 'text-navy-800 hover:text-accent'
                   }`
                 }
               >
                 {link.label}
-                {link.hasDropdown && <ChevronDown size={14} />}
               </NavLink>
             ))}
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <Link
+              to="/contact"
+              className="text-sm font-medium text-navy-800 hover:text-accent transition-colors"
+            >
+              Contact
+            </Link>
             <Link
               to="/demo"
-              className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-navy-700 transition-colors"
+              className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-5 py-2.5 rounded-lg hover:bg-accent-light transition-colors"
             >
-              Book a Demo
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
+              Request a Demo
+              <ArrowRight size={14} />
             </Link>
           </div>
 
@@ -80,15 +81,14 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             >
               {link.label}
-              {link.hasDropdown && <ChevronDown size={14} />}
             </Link>
           ))}
           <Link
             to="/demo"
-            className="block w-full mt-3 bg-navy-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg text-center"
+            className="block w-full mt-3 bg-accent text-white text-sm font-medium px-5 py-2.5 rounded-lg text-center"
             onClick={() => setMobileOpen(false)}
           >
-            Book a Demo
+            Request a Demo
           </Link>
         </div>
       )}

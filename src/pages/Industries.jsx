@@ -12,7 +12,21 @@ import {
   Zap,
 } from 'lucide-react';
 
-const industries = [
+const primaryIndustry = {
+  icon: Building2,
+  name: 'FMCG Distribution',
+  shortDesc: 'Reduce stock-outs and inventory waste across channels.',
+  longDesc: 'Distributors use StableScore to balance inventory across warehouses, predict demand spikes, and minimize write-offs from expired goods.',
+  useCases: [
+    'Multi-warehouse stock balancing',
+    'Demand spike prediction',
+    'Expiry risk alerting',
+    'Promotional impact planning',
+  ],
+  metric: 'Improved stock availability and reduced waste',
+};
+
+const adjacentIndustries = [
   {
     icon: Factory,
     name: 'Manufacturing',
@@ -25,19 +39,6 @@ const industries = [
       'Quality defect early warning',
     ],
     metric: 'Faster purchasing decisions and reduced shortages',
-  },
-  {
-    icon: Building2,
-    name: 'FMCG Distribution',
-    shortDesc: 'Reduce stock-outs and inventory waste across channels.',
-    longDesc: 'Distributors use StableScore to balance inventory across warehouses, predict demand spikes, and minimize write-offs from expired goods.',
-    useCases: [
-      'Multi-warehouse stock balancing',
-      'Demand spike prediction',
-      'Expiry risk alerting',
-      'Promotional impact planning',
-    ],
-    metric: 'Improved stock availability and reduced waste',
   },
   {
     icon: Landmark,
@@ -78,64 +79,26 @@ const industries = [
     ],
     metric: 'Improved on-time delivery and fleet efficiency',
   },
+];
+
+const potentialIndustries = [
   {
     icon: Stethoscope,
     name: 'Healthcare',
     shortDesc: 'Support supply planning and inventory visibility in care environments.',
-    longDesc: 'In healthcare environments, decision intelligence can support supply planning and inventory visibility where operational data is available.',
-    useCases: [
-      'Supply planning support',
-      'Inventory visibility',
-      'Demand pattern review',
-      'Operational data consolidation',
-    ],
     metric: 'Improved visibility into operational data',
-    potential: true,
   },
   {
     icon: FlaskConical,
     name: 'Pharma',
     shortDesc: 'Support inventory visibility and operational traceability where applicable.',
-    longDesc: 'In pharmaceutical operations, decision intelligence can support inventory tracking and operational data review subject to applicable regulatory frameworks.',
-    useCases: [
-      'Inventory tracking support',
-      'Operational data review',
-      'Demand deviation detection',
-      'Cross-system data consolidation',
-    ],
     metric: 'Improved operational data visibility',
-    potential: true,
   },
   {
     icon: Zap,
     name: 'Energy & Utilities',
     shortDesc: 'Optimize spare parts inventory and maintenance schedules.',
-    longDesc: 'Energy companies reduce downtime by ensuring critical spare parts availability while optimizing maintenance inventory costs.',
-    useCases: [
-      'Critical spare parts availability',
-      'Maintenance schedule optimization',
-      'Vendor consolidation insights',
-      'Demand forecasting for parts',
-    ],
     metric: 'Lower inventory costs and higher uptime',
-  },
-];
-
-const caseStudies = [
-  {
-    industry: 'FMCG Distribution',
-    company: 'Leading European Distributor',
-    result: 'Reduced stock-out exposure and inventory waste through AI-driven demand sensing and automated replenishment recommendations.',
-  },
-  {
-    industry: 'Manufacturing',
-    company: 'Mid-Sized Manufacturer',
-    result: 'Accelerated supplier comparison and purchasing decisions by embedding procurement intelligence directly into operational workflows.',
-  },
-  {
-    industry: 'Financial Operations',
-    company: 'Financial Services Team',
-    result: 'Automated high-volume compliance reviews and reduced manual effort by surfacing only high-risk items for human review.',
   },
 ];
 
@@ -151,85 +114,114 @@ export default function Industries() {
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">INDUSTRIES</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Operational intelligence for every sector.
+              FMCG Distribution is our focus. Adjacent industries are next.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed">
-              StableScore adapts to the unique challenges of your industry — from manufacturing floors to hospital supply rooms.
+              StableScore AI is built for operational environments with structured ERP data and measurable inventory risk. We started with FMCG distribution and are expanding into manufacturing, retail, logistics and regulated operations.
             </p>
             <Link
               to="/demo"
-              className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-navy-700 transition-colors mt-8"
+              className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors mt-8"
             >
-              Request a Demo
+              See where your operational risk is hidden
               <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. Strategic Framing */}
-      <section className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.03] blur-[100px] pointer-events-none" />
+      {/* 2. Primary Industry — FMCG */}
+      <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-4">
+            <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider rounded-full">
+              Primary Focus
+            </span>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
+                <primaryIndustry.icon size={24} className="text-accent" strokeWidth={1.5} />
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
+                {primaryIndustry.name}
+              </h2>
+              <p className="text-lg text-muted leading-relaxed mb-6">
+                {primaryIndustry.longDesc}
+              </p>
+              <ul className="space-y-3 mb-8">
+                {primaryIndustry.useCases.map((uc) => (
+                  <li key={uc} className="flex items-start gap-3 text-base text-navy-800">
+                    <Check size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
+                    {uc}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                to="/demo"
+                className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
+              >
+                See how it works for distributors <ArrowRight size={14} />
+              </Link>
+            </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-              Cross-industry decision intelligence
-            </h2>
-            <p className="text-base text-muted leading-relaxed">
-              StableScore AI is designed as a decision intelligence platform for operational environments where timing, visibility and explainable action matter.
-            </p>
+            <div className="bg-white border border-border rounded-2xl p-8 shadow-sm">
+              <div className="flex items-center justify-between mb-6">
+                <p className="text-sm font-semibold text-navy-900">{primaryIndustry.name} Impact</p>
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2 h-2 rounded-full bg-red-400" />
+                  <div className="w-2 h-2 rounded-full bg-yellow-400" />
+                  <div className="w-2 h-2 rounded-full bg-green-400" />
+                </div>
+              </div>
+              <div className="bg-bg-light rounded-lg p-5 mb-4">
+                <p className="text-xs text-muted uppercase tracking-wide mb-2">Key Outcome</p>
+                <p className="text-base text-navy-900 leading-relaxed">{primaryIndustry.metric}</p>
+              </div>
+              <div className="space-y-3">
+                {[1, 2, 3].map((n) => (
+                  <div key={n} className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                      <Check size={14} className="text-accent" />
+                    </div>
+                    <div className="h-2 bg-gray-200 rounded-full flex-1" style={{ width: `${50 + n * 12}%` }} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 3. FMCG Positioning */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      {/* 3. Adjacent Industries */}
+      <section className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Focus</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-              Why FMCG distribution is the initial focus
-            </h2>
-            <p className="text-base text-muted leading-relaxed">
-              FMCG distribution combines operational complexity, structured ERP environments and measurable inventory risk, making it a strong beachhead market for decision intelligence systems.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Industries Grid */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="mb-8">
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Adjacent Markets</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
-              Applicable across operational environments.
+              Proven operational patterns. Expanding industries.
             </h2>
-            <p className="mt-4 text-base text-muted leading-relaxed">
-              See how mid-sized companies in your sector use StableScore to drive measurable outcomes.
-            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((ind) => (
+          <div className="grid md:grid-cols-2 gap-6">
+            {adjacentIndustries.map((ind) => (
               <div
                 key={ind.name}
-                className="bg-white border border-border rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
+                className="bg-bg-light border border-border rounded-2xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                   <ind.icon size={22} className="text-accent" strokeWidth={1.5} />
                 </div>
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-base font-semibold text-navy-900">{ind.name}</h3>
-                  {ind.potential && (
-                    <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-semibold uppercase tracking-wider rounded-full">
-                      Potential
-                    </span>
-                  )}
-                </div>
-                <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{ind.shortDesc}</p>
+                <h3 className="text-lg font-semibold text-navy-900 mb-2">{ind.name}</h3>
+                <p className="text-sm text-muted leading-relaxed mb-4">{ind.shortDesc}</p>
+                <ul className="space-y-2 mb-5">
+                  {ind.useCases.slice(0, 2).map((uc) => (
+                    <li key={uc} className="flex items-start gap-2 text-sm text-navy-800">
+                      <Check size={14} className="text-green-500 flex-shrink-0 mt-0.5" />
+                      {uc}
+                    </li>
+                  ))}
+                </ul>
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm font-semibold text-accent">{ind.metric}</p>
                 </div>
@@ -239,115 +231,43 @@ export default function Industries() {
         </div>
       </section>
 
-      {/* 5. Industry Detail Sections */}
-      {industries.slice(0, 5).map((ind, i) => (
-        <section
-          key={ind.name}
-          className={`w-full py-16 md:py-24 ${i % 2 === 0 ? 'bg-white' : 'bg-bg-light'}`}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-5">
-                  <ind.icon size={24} className="text-accent" strokeWidth={1.5} />
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-                  {ind.name}
-                </h2>
-                <p className="text-lg text-muted leading-relaxed mb-6">
-                  {ind.longDesc}
-                </p>
-                <ul className="space-y-3 mb-8">
-                  {ind.useCases.map((uc) => (
-                    <li key={uc} className="flex items-start gap-3 text-base text-navy-800">
-                      <Check size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-                      {uc}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/demo"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-light transition-colors"
-                >
-                  Explore {ind.name} solutions <ArrowRight size={14} />
-                </Link>
-              </div>
-
-              <div className={i % 2 === 1 ? 'lg:order-1' : ''}>
-                <div className="bg-white border border-border rounded-2xl p-8 shadow-sm">
-                  <div className="flex items-center justify-between mb-6">
-                    <p className="text-sm font-semibold text-navy-900">{ind.name} Impact</p>
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-2 h-2 rounded-full bg-red-400" />
-                      <div className="w-2 h-2 rounded-full bg-yellow-400" />
-                      <div className="w-2 h-2 rounded-full bg-green-400" />
-                    </div>
-                  </div>
-                  <div className="bg-bg-light rounded-lg p-5 mb-4">
-                    <p className="text-xs text-muted uppercase tracking-wide mb-2">Key Outcome</p>
-                    <p className="text-base text-navy-900 leading-relaxed">{ind.metric}</p>
-                  </div>
-                  <div className="space-y-3">
-                    {[1, 2, 3].map((n) => (
-                      <div key={n} className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                          <Check size={14} className="text-accent" />
-                        </div>
-                        <div className="h-2 bg-gray-200 rounded-full flex-1" style={{ width: `${50 + n * 12}%` }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      ))}
-
-      {/* 6. Case Studies by Industry */}
-      <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute top-[-10%] left-[30%] w-[400px] h-[400px] rounded-full bg-accent/[0.07] blur-[120px] pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">CASE STUDIES</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Example applications by industry.
+      {/* 4. Potential Industries */}
+      <section className="w-full bg-bg-light py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-xs font-semibold text-muted uppercase tracking-wider mb-3">Potential Applications</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 leading-tight">
+              Future operational environments.
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {caseStudies.map((cs) => (
+          <div className="grid sm:grid-cols-3 gap-6">
+            {potentialIndustries.map((ind) => (
               <div
-                key={cs.industry}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6"
+                key={ind.name}
+                className="bg-white border border-border rounded-2xl p-6 opacity-70 hover:opacity-100 transition-opacity"
               >
-                <div className="md:w-48 flex-shrink-0">
-                  <p className="text-xs font-bold text-accent-light uppercase tracking-wider mb-1">{cs.industry}</p>
-                  <p className="text-sm text-gray-300">{cs.company}</p>
+                <div className="flex items-center gap-2 mb-3">
+                  <ind.icon size={20} className="text-muted" strokeWidth={1.5} />
+                  <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-semibold uppercase tracking-wider rounded-full">
+                    Potential
+                  </span>
                 </div>
-                <div className="flex-1">
-                  <p className="text-base text-white leading-relaxed">{cs.result}</p>
-                </div>
-                <Link
-                  to="/case-studies"
-                  className="text-sm font-medium text-accent-light hover:text-white transition-colors flex-shrink-0"
-                >
-                  Read case study →
-                </Link>
+                <h3 className="text-base font-semibold text-navy-900 mb-1">{ind.name}</h3>
+                <p className="text-sm text-muted leading-relaxed">{ind.shortDesc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 7. Bottom CTA */}
-      <section className="w-full bg-white py-16 md:py-24">
+      {/* 5. Bottom CTA */}
+      <section className="w-full bg-navy-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-            See how StableScore fits your industry.
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+            See where your operational risk is hidden.
           </h2>
-          <p className="text-base text-muted leading-relaxed mb-8">
+          <p className="text-base text-gray-300 leading-relaxed mb-8">
             Book a tailored walkthrough with our industry specialists.
           </p>
           <Link

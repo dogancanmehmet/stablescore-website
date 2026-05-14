@@ -33,12 +33,12 @@ export default function BusinessModel() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Commercial Model</p>
+          <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">How We Work With You</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-            SaaS-first. Enterprise-ready.
+            Start with a PoC. Scale as you grow.
           </h2>
           <p className="text-base text-muted leading-relaxed">
-            StableScore AI is built for venture-scale growth through a tiered deployment and pricing model that starts with SaaS and expands into enterprise private and on-premise deployments.
+            Every engagement starts with a proof of concept using your operational data. Once value is demonstrated, we deploy on the model that fits your security and scaling needs.
           </p>
         </div>
 
@@ -65,33 +65,33 @@ export default function BusinessModel() {
         <div className="max-w-3xl mx-auto bg-navy-900 rounded-2xl p-8 md:p-10 relative overflow-hidden">
           <div className="absolute top-[-20%] right-[-10%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
           <div className="relative">
-            <h3 className="text-xl font-bold text-white mb-4">GTM Motion</h3>
+            <h3 className="text-xl font-bold text-white mb-4">How Customers Start</h3>
             <div className="grid sm:grid-cols-3 gap-6">
               <div>
-                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Phase 1</p>
-                <p className="text-sm text-white font-medium mb-1">PoC-Led Validation</p>
-                <p className="text-xs text-gray-400 leading-relaxed">Evaluate StableScore with existing operational data to validate risk signals and use cases.</p>
+                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Step 1</p>
+                <p className="text-sm text-white font-medium mb-1">Data Evaluation</p>
+                <p className="text-xs text-gray-400 leading-relaxed">Upload or connect sample operational data. We identify risk signals and use cases within days.</p>
               </div>
               <div>
-                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Phase 2</p>
-                <p className="text-sm text-white font-medium mb-1">SaaS Adoption</p>
-                <p className="text-xs text-gray-400 leading-relaxed">Deploy on managed cloud with structured onboarding and operational workflow integration.</p>
+                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Step 2</p>
+                <p className="text-sm text-white font-medium mb-1">PoC Validation</p>
+                <p className="text-xs text-gray-400 leading-relaxed">See decision cards, risk rankings and recommended actions using your real operational context.</p>
               </div>
               <div>
-                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Phase 3</p>
-                <p className="text-sm text-white font-medium mb-1">Enterprise Expansion</p>
-                <p className="text-xs text-gray-400 leading-relaxed">Scale to private cloud or on-premise for multi-division, multi-region operational deployments.</p>
+                <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-2">Step 3</p>
+                <p className="text-sm text-white font-medium mb-1">Production Deploy</p>
+                <p className="text-xs text-gray-400 leading-relaxed">Choose SaaS, Private Cloud or On-Premise. Integrate into operational workflows and scale.</p>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <p className="text-sm text-gray-300">
-                Interested in revenue model, unit economics or partnership terms?
+                Ready to see your operational risk map?
               </p>
               <Link
-                to="/contact"
+                to="/demo"
                 className="inline-flex items-center gap-2 text-sm font-medium text-accent-light hover:text-white transition-colors"
               >
-                Discuss commercial terms <ArrowRight size={14} />
+                Request a PoC <ArrowRight size={14} />
               </Link>
             </div>
           </div>

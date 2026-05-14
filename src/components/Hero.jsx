@@ -11,24 +11,24 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="max-w-xl">
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Act before operational risk becomes revenue loss.
+              Identify revenue leakage before it appears in your monthly reports.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed">
-              StableScore AI connects to ERP and operational data to detect risks, explain root causes, and recommend the next best action — before stock-outs, waste, delays, or missed sales hit your business.
+              StableScore AI connects to your ERP and operational data to detect risks, explain root causes, and recommend the next best action — so you stop losing money to stock-outs, waste, delays and missed sales.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
                 to="/demo"
-                className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-navy-700 transition-colors"
+                className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors"
               >
-                Request a Demo
+                See where your operational risk is hidden
                 <ArrowRight size={16} />
               </Link>
               <Link
                 to="/solutions"
                 className="inline-flex items-center gap-2 border border-border text-navy-800 text-sm font-medium px-6 py-3 rounded-lg hover:bg-bg-light transition-colors"
               >
-                Explore the Platform
+                Explore Solutions
               </Link>
             </div>
             <p className="mt-6 text-xs text-muted">
@@ -90,8 +90,8 @@ export default function Hero() {
                     </div>
                     <div className="grid grid-cols-2 gap-2 mb-3">
                       <div className="bg-white/60 rounded-lg p-2.5">
-                        <p className="text-[9px] text-muted uppercase tracking-wide">Financial Impact</p>
-                        <p className="text-sm font-bold text-navy-900">€240K est. revenue at risk</p>
+                        <p className="text-[9px] text-muted uppercase tracking-wide">Revenue at Risk</p>
+                        <p className="text-sm font-bold text-navy-900">€240K est. loss</p>
                       </div>
                       <div className="bg-white/60 rounded-lg p-2.5">
                         <p className="text-[9px] text-muted uppercase tracking-wide">Time to Impact</p>
@@ -101,11 +101,11 @@ export default function Hero() {
                     <div className="space-y-1.5 mb-3">
                       <div className="flex items-center gap-2">
                         <Search size={12} className="text-red-500 flex-shrink-0" />
-                        <p className="text-[11px] text-navy-800"><strong>Root cause:</strong> Demand increased 34% vs forecast; current stock covers 12 days; supplier lead time is 18 days.</p>
+                        <p className="text-[11px] text-navy-800"><strong>Root cause:</strong> Demand up 34% vs forecast; stock covers 12 days; lead time is 18 days.</p>
                       </div>
                       <div className="flex items-center gap-2">
                         <FileText size={12} className="text-red-500 flex-shrink-0" />
-                        <p className="text-[11px] text-navy-800"><strong>Contributing signals:</strong> 3 SKUs below safety stock; 2 suppliers with extended lead times.</p>
+                        <p className="text-[11px] text-navy-800"><strong>Contributing signals:</strong> 3 SKUs below safety stock; 2 suppliers delayed.</p>
                       </div>
                     </div>
                     <div className="bg-white rounded-lg p-3">

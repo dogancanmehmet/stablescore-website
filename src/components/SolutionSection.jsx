@@ -3,23 +3,23 @@ import { Search, TrendingUp, ClipboardList, MessageCircle } from 'lucide-react';
 const features = [
   {
     icon: Search,
-    title: 'Detect Risks Early',
-    desc: 'Identify operational risks before they impact revenue or operations.',
+    title: 'Detect Revenue Risks Early',
+    desc: 'Identify stock-out exposure, dead stock and procurement gaps before they hit your P&L.',
   },
   {
     icon: TrendingUp,
-    title: 'Reveal Hidden Opportunities',
-    desc: 'Uncover profit leaks and operational gaps you can act on.',
+    title: 'Prioritize by Financial Impact',
+    desc: 'Rank operational risks by estimated revenue impact so your team fixes what matters most first.',
   },
   {
     icon: ClipboardList,
     title: 'Recommend Next Best Action',
-    desc: 'Get clear, prioritized actions tailored to your business context.',
+    desc: 'Get clear, prioritized actions with confidence scores — not raw data dumps.',
   },
   {
     icon: MessageCircle,
     title: 'Explain Every Decision',
-    desc: 'Understand the why behind every recommendation. No black boxes.',
+    desc: 'Understand the root cause, contributing signals and expected outcome before you act.',
   },
 ];
 
@@ -34,12 +34,12 @@ export default function SolutionSection() {
           <div>
             <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">OUR SOLUTION</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-              Continuous decision intelligence on top of your operational data.
+              A decision layer that protects revenue and reduces manual analysis.
             </h2>
           </div>
           <div>
             <p className="text-base text-gray-300 leading-relaxed">
-              StableScore connects to your ERP, WMS, and operational systems to build a real-time decision layer. It continuously monitors signals, detects patterns, explains what matters, and tells you what to do next.
+              StableScore connects to your ERP and operational systems to continuously monitor signals, detect risks, explain root causes and recommend the next best action — so your team stops reacting and starts deciding.
             </p>
           </div>
         </div>

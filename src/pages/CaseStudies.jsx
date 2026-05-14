@@ -7,42 +7,33 @@ const cases = [
     industry: 'FMCG Distribution',
     icon: Building2,
     title: 'Detecting stock-out exposure and high-waste inventory patterns',
-    challenge: 'Distribution teams often work with fragmented ERP reports, manual planning sheets and delayed visibility into stock movements. By the time a problem appears in standard reporting, lost sales or waste may already have occurred.',
-    solution: 'StableScore AI analyzed 30M+ rows of historical operational data in under 30 minutes, detected recurring risk patterns and surfaced early signals related to stock-out exposure, return risk and inventory inefficiency.',
-    outcome: [
-      'Identified stock-out exposure across product and location combinations.',
-      'Achieved >80% accuracy in return-rate prediction for high-risk inventory segments.',
-      'Surfaced high-waste and high-return inventory patterns before they hit reporting cycles.',
-      'Created a foundation for explainable next-best-action recommendations.',
-    ],
+    problem: 'Distribution teams rely on fragmented ERP reports and manual planning sheets. By the time a stock problem appears in monthly reporting, lost sales or waste have already occurred.',
+    hiddenCost: 'Revenue leakage from stock-outs and expired inventory was invisible until it hit the P&L. Teams spent hours each week manually reconciling stock levels across warehouses.',
+    detected: 'StableScore AI analyzed 30M+ rows of operational data in under 30 minutes and identified product-location combinations with stock-out exposure. >80% accuracy in predicting high-return inventory segments.',
+    suggestedAction: 'Emergency reorder for at-risk product groups; redistribution of slow-moving stock before expiry; supplier lead-time renegotiation for flagged SKUs.',
+    businessImpact: 'Stock-out risks surfaced weeks earlier than traditional reporting. Procurement team moved from reactive firefighting to prioritized action. Foundation established for automated replenishment recommendations.',
   },
   {
     slug: 'procurement-comparison-assistant',
     industry: 'Manufacturing & Procurement',
     icon: Factory,
     title: 'Reducing manual effort in offer collection and supplier comparison',
-    challenge: 'Procurement teams often spend significant time collecting offers, normalizing supplier information and comparing terms manually across files, emails and ERP records.',
-    solution: 'StableScore AI supported the analysis of supplier and procurement data by structuring fragmented information, comparing relevant parameters and highlighting decision-relevant differences.',
-    outcome: [
-      'Reduced procurement comparison cycles from days to minutes for standard offers.',
-      'Improved visibility across supplier offers and procurement options.',
-      'Supported faster and more consistent comparison workflows.',
-      'Helped teams move from document handling to decision preparation.',
-    ],
+    problem: 'Procurement teams spent days collecting supplier offers, normalizing terms and comparing parameters across files, emails and ERP records.',
+    hiddenCost: 'Significant analyst hours consumed by repetitive data entry and manual comparison. Delayed purchasing decisions led to rushed orders at premium prices.',
+    detected: 'StableScore AI structured fragmented supplier data, identified decision-relevant differences and highlighted terms that deviated from historical benchmarks.',
+    suggestedAction: 'Prioritized supplier shortlist with ranked alternatives; flagged non-standard terms for legal review; recommended negotiation targets based on historical data.',
+    businessImpact: 'Procurement comparison cycles reduced from days to minutes for standard offers. Team capacity reallocated from document handling to strategic supplier management.',
   },
   {
     slug: 'regulated-data-review',
     industry: 'Regulated Operations',
     icon: Landmark,
     title: 'Supporting structured review of operational and compliance-related data',
-    challenge: 'Teams in regulated environments need to review complex information carefully while maintaining control over sensitive data and decision traceability.',
-    solution: 'StableScore AI provided a private-first analytical layer to help structure internal data, identify relevant signals and support explainable review workflows.',
-    outcome: [
-      'Reduced manual review workload by surfacing only high-priority items for human attention.',
-      'Improved consistency in information review across large datasets.',
-      'Supported traceable and explainable decision preparation.',
-      'Kept sensitive data within controlled environments.',
-    ],
+    problem: 'Regulated teams reviewed large volumes of operational data manually, with no systematic way to prioritize high-risk items or maintain decision traceability.',
+    hiddenCost: 'Analysts spent disproportionate time on low-risk reviews while high-priority items waited in queue. Audit preparation required reconstructing decision trails from scattered files.',
+    detected: 'StableScore AI applied private-first analytics to structure internal data, identify anomaly patterns and surface only high-priority items requiring human judgment.',
+    suggestedAction: 'Ranked review queue by risk score; pre-populated review templates with detected signals; maintained traceable decision log for audit readiness.',
+    businessImpact: 'Manual review workload reduced by surfacing high-priority items first. Review consistency improved across team members. Sensitive data remained within controlled environment.',
   },
 ];
 
@@ -52,41 +43,33 @@ export default function CaseStudies() {
       {/* 1. Hero */}
       <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[120px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Case Studies</p>
             <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold text-navy-900 leading-[1.1] tracking-tight">
-              Decision intelligence applied to real operational problems.
+              See how operational teams stop revenue leakage.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed">
-              Examples of how StableScore AI can help teams detect risks, understand root causes and act earlier across operational environments.
+              Real anonymized examples of how StableScore AI detects hidden operational risks, explains root causes and recommends actions with measurable business impact.
             </p>
+            <Link
+              to="/demo"
+              className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors mt-8"
+            >
+              See where your operational risk is hidden
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. Operational Signals Section */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-              From operational signals to explainable actions
-            </h2>
-            <p className="text-base text-muted leading-relaxed">
-              StableScore AI helps organizations move from fragmented reporting and delayed reactions to continuous operational visibility and decision support.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Disclaimer */}
+      {/* 2. Disclaimer */}
       <section className="w-full bg-bg-light py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs text-muted">
-            Some case studies are anonymized or generalized to protect customer confidentiality. Results may vary depending on data quality, process maturity and deployment scope.
+            All case studies are anonymized to protect customer confidentiality. Results depend on data quality, process maturity and deployment scope.
           </p>
         </div>
       </section>
@@ -94,7 +77,7 @@ export default function CaseStudies() {
       {/* 3. Cases */}
       <section className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
+          <div className="space-y-16">
             {cases.map((cs) => (
               <div
                 key={cs.slug}
@@ -106,29 +89,30 @@ export default function CaseStudies() {
                 </div>
 
                 <div className="p-8 md:p-10">
-                  <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 leading-tight mb-10">
                     {cs.title}
                   </h2>
 
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div>
-                      <p className="text-xs font-semibold text-navy-900 uppercase tracking-wider mb-2">Challenge</p>
-                      <p className="text-sm text-muted leading-relaxed">{cs.challenge}</p>
+                  <div className="grid md:grid-cols-5 gap-6">
+                    <div className="md:col-span-1">
+                      <p className="text-[10px] font-bold text-navy-900 uppercase tracking-wider mb-2">Problem</p>
+                      <p className="text-sm text-muted leading-relaxed">{cs.problem}</p>
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold text-navy-900 uppercase tracking-wider mb-2">Solution</p>
-                      <p className="text-sm text-muted leading-relaxed">{cs.solution}</p>
+                    <div className="md:col-span-1">
+                      <p className="text-[10px] font-bold text-red-600 uppercase tracking-wider mb-2">Hidden Cost</p>
+                      <p className="text-sm text-muted leading-relaxed">{cs.hiddenCost}</p>
                     </div>
-                    <div>
-                      <p className="text-xs font-semibold text-navy-900 uppercase tracking-wider mb-2">Outcome</p>
-                      <ul className="space-y-2">
-                        {cs.outcome.map((o) => (
-                          <li key={o} className="flex items-start gap-2 text-sm text-navy-800">
-                            <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0 mt-1.5" />
-                            {o}
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="md:col-span-1">
+                      <p className="text-[10px] font-bold text-accent uppercase tracking-wider mb-2">What StableScore Detected</p>
+                      <p className="text-sm text-muted leading-relaxed">{cs.detected}</p>
+                    </div>
+                    <div className="md:col-span-1">
+                      <p className="text-[10px] font-bold text-navy-900 uppercase tracking-wider mb-2">Suggested Action</p>
+                      <p className="text-sm text-muted leading-relaxed">{cs.suggestedAction}</p>
+                    </div>
+                    <div className="md:col-span-1 bg-green-50 rounded-xl p-4">
+                      <p className="text-[10px] font-bold text-green-700 uppercase tracking-wider mb-2">Business Impact</p>
+                      <p className="text-sm text-navy-800 leading-relaxed">{cs.businessImpact}</p>
                     </div>
                   </div>
                 </div>
@@ -139,19 +123,19 @@ export default function CaseStudies() {
       </section>
 
       {/* 4. CTA */}
-      <section className="w-full bg-white py-16 md:py-24">
+      <section className="w-full bg-navy-900 py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-4">
-            Have a similar operational challenge?
+          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight mb-4">
+            See where your operational risk is hidden.
           </h2>
-          <p className="text-base text-muted leading-relaxed mb-8">
-            StableScore AI can be evaluated with your existing operational data to identify relevant risk signals, decision bottlenecks and measurable use cases.
+          <p className="text-base text-gray-300 leading-relaxed mb-8">
+            We will evaluate your operational data to identify revenue leakage, decision bottlenecks and prioritized actions.
           </p>
           <Link
             to="/demo"
-            className="inline-flex items-center gap-2 bg-navy-900 text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-navy-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-8 py-3.5 rounded-lg hover:bg-accent-light transition-colors"
           >
-            Discuss Your Use Case
+            Request a Demo
             <ArrowRight size={16} />
           </Link>
         </div>

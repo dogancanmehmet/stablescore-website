@@ -3,18 +3,18 @@ import { Database, BarChart3, AlertTriangle } from 'lucide-react';
 const problems = [
   {
     icon: Database,
-    title: 'ERP systems store data.',
-    desc: "But they don't tell teams what to do next. Data sits in silos while decisions are made on gut feel.",
+    title: 'Revenue leakage is invisible until it hits the P&L.',
+    desc: 'ERP systems store data but do not alert teams to stock-outs, waste or delays before revenue is lost. By the time the problem is visible, the money is already gone.',
   },
   {
     icon: BarChart3,
-    title: 'Dashboards show history.',
-    desc: 'Problems become visible after the damage happens. By the time you see the trend, the opportunity is gone.',
+    title: 'Manual analysis burns hours every week.',
+    desc: 'Teams spend significant time reconciling spreadsheets, checking reports and chasing signals across disconnected systems. Time that could go into decisions goes into data collection.',
   },
   {
     icon: AlertTriangle,
-    title: 'Teams rely on intuition.',
-    desc: 'Critical decisions are based on experience and spreadsheets — not on continuous, explainable intelligence from your operational data.',
+    title: 'Intuition fails when complexity rises.',
+    desc: 'With thousands of SKUs, multiple warehouses and shifting demand, no team can monitor everything. Critical risks slip through until they become emergencies.',
   },
 ];
 
@@ -26,14 +26,14 @@ export default function ProblemSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">THE PROBLEM</p>
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">THE COST OF DELAY</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
-              You do not lack dashboards. You lack a decision system.
+              Every month, operational risks drain revenue before you see them in reports.
             </h2>
           </div>
           <div className="pt-1">
             <p className="text-base text-muted leading-relaxed">
-              Mid-sized companies have more operational data than ever. Yet most still rely on systems that report the past, not guide the future. When complexity rises, intuition fails — and revenue leaks.
+              Mid-sized operational companies lose money to stock-outs, expired inventory, procurement inefficiencies and delayed decisions. The problem is not lack of data. It is lack of a system that turns data into prioritized, explainable actions before financial damage happens.
             </p>
           </div>
         </div>
