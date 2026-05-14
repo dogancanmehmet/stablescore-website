@@ -103,7 +103,7 @@ export default function Solutions() {
   return (
     <div className="w-full">
       {/* 1. Page Hero */}
-      <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
+      <section id="overview" className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
 
@@ -147,7 +147,7 @@ export default function Solutions() {
       </section>
 
       {/* 2. Solutions Overview Grid */}
-      <section className="w-full bg-bg-light py-16 md:py-24 relative overflow-hidden">
+      <section id="solutions-grid" className="w-full bg-bg-light py-16 md:py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
@@ -190,6 +190,7 @@ export default function Solutions() {
       {solutions.map((s, i) => (
         <section
           key={s.title}
+          id={s.title.toLowerCase().replace(/\s+/g, '-')}
           className={`w-full py-16 md:py-24 ${i % 2 === 0 ? 'bg-white' : 'bg-bg-light'}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

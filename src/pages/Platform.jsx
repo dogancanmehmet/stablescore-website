@@ -78,7 +78,7 @@ export default function Platform() {
   return (
     <div className="w-full">
       {/* 1. Hero */}
-      <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
+      <section id="overview" className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
 
@@ -111,7 +111,7 @@ export default function Platform() {
       </section>
 
       {/* 2. Four Sections */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="features" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             {sections.map((s) => (
@@ -139,7 +139,7 @@ export default function Platform() {
       </section>
 
       {/* 3. Technical Positioning */}
-      <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
+      <section id="architecture" className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[20%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-indigo-400/[0.06] blur-[100px] pointer-events-none" />
 
@@ -169,7 +169,7 @@ export default function Platform() {
       </section>
 
       {/* 4. Controlled Environments */}
-      <section className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
+      <section id="security" className="w-full bg-white py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.03] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.03] blur-[100px] pointer-events-none" />
 
@@ -199,7 +199,7 @@ export default function Platform() {
       </section>
 
       {/* 5. Workflow Layer */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="workflows" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
@@ -227,7 +227,7 @@ export default function Platform() {
       </section>
 
       {/* 6. Deployment */}
-      <section className="w-full bg-white py-16 md:py-24">
+      <section id="deployment" className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Deployment</p>

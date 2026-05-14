@@ -41,7 +41,7 @@ export default function CaseStudies() {
   return (
     <div className="w-full">
       {/* 1. Hero */}
-      <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
+      <section id="overview" className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[120px] pointer-events-none" />
 
@@ -75,12 +75,13 @@ export default function CaseStudies() {
       </section>
 
       {/* 3. Cases */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="cases" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {cases.map((cs) => (
               <div
                 key={cs.slug}
+                id={cs.slug}
                 className="bg-white border border-border rounded-2xl overflow-hidden"
               >
                 <div className="bg-accent/[0.03] px-8 py-4 border-b border-border flex items-center gap-3">

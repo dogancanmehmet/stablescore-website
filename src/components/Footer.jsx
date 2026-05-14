@@ -5,8 +5,8 @@ const links = {
   PLATFORM: [
     { label: 'Overview', to: '/platform#overview' },
     { label: 'Architecture', to: '/platform#architecture' },
-    { label: 'Integrations', to: '/platform#integrations' },
-    { label: 'Security', to: '/platform#security' },
+    { label: 'Workflows', to: '/platform#workflows' },
+    { label: 'Deployment', to: '/platform#deployment' },
   ],
   SOLUTIONS: [
     { label: 'Inventory Intelligence', to: '/solutions#inventory-intelligence' },
@@ -16,14 +16,14 @@ const links = {
     { label: 'Industries', to: '/industries' },
   ],
   'CASE STUDIES': [
-    { label: 'All Case Studies', to: '/case-studies' },
-    { label: 'FMCG Distribution', to: '/case-studies#fmcg-distribution' },
-    { label: 'Manufacturing', to: '/case-studies#manufacturing' },
-    { label: 'Financial Operations', to: '/case-studies#financial-operations' },
+    { label: 'All Case Studies', to: '/case-studies#cases' },
+    { label: 'FMCG Distribution', to: '/case-studies#fmcg-distribution-risk-detection' },
+    { label: 'Manufacturing', to: '/case-studies#procurement-comparison-assistant' },
+    { label: 'Regulated Operations', to: '/case-studies#regulated-data-review' },
   ],
   COMPANY: [
     { label: 'About Us', to: '/about#about-us' },
-    { label: 'Careers', to: '/about#careers' },
+    { label: 'Our Approach', to: '/about#approach' },
     { label: 'News', to: '/news' },
   ],
 };

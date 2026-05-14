@@ -38,7 +38,7 @@ export default function About() {
   return (
     <div className="w-full">
       {/* 1. Hero */}
-      <section className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
+      <section id="about-us" className="w-full bg-white pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-accent/[0.04] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[-15%] left-[-10%] w-[400px] h-[400px] rounded-full bg-blue-400/[0.04] blur-[100px] pointer-events-none" />
 
@@ -56,7 +56,7 @@ export default function About() {
       </section>
 
       {/* 2. Our Approach */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="approach" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Approach</p>
@@ -71,7 +71,7 @@ export default function About() {
       </section>
 
       {/* 3. Mission */}
-      <section className="w-full bg-white py-16 md:py-24">
+      <section id="mission" className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Our Mission</p>
@@ -86,7 +86,7 @@ export default function About() {
       </section>
 
       {/* 4. What We Build */}
-      <section className="w-full bg-white py-16 md:py-24">
+      <section id="what-we-build" className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">What We Build</p>
@@ -113,7 +113,7 @@ export default function About() {
       </section>
 
       {/* 5. Built Around Operational Reality */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="operational-reality" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
@@ -141,7 +141,7 @@ export default function About() {
       </section>
 
       {/* 6. Principles */}
-      <section className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
+      <section id="principles" className="w-full bg-navy-900 py-16 md:py-24 relative overflow-hidden">
         <div className="absolute top-[20%] left-[-5%] w-[300px] h-[300px] rounded-full bg-accent/[0.08] blur-[120px] pointer-events-none" />
         <div className="absolute bottom-[10%] right-[-5%] w-[350px] h-[350px] rounded-full bg-indigo-400/[0.06] blur-[100px] pointer-events-none" />
 
@@ -166,7 +166,7 @@ export default function About() {
       </section>
 
       {/* 7. Team */}
-      <section className="w-full bg-white py-16 md:py-24">
+      <section id="team" className="w-full bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div>
@@ -196,7 +196,7 @@ export default function About() {
       </section>
 
       {/* 8. Validation */}
-      <section className="w-full bg-bg-light py-16 md:py-24">
+      <section id="validation" className="w-full bg-bg-light py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">Validation</p>
