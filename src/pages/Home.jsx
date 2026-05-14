@@ -10,6 +10,7 @@ import UseCases from '../components/UseCases';
 import ExplainabilitySection from '../components/ExplainabilitySection';
 import WhyEmbedded from '../components/WhyEmbedded';
 import ComparisonSection from '../components/ComparisonSection';
+import BusinessModel from '../components/BusinessModel';
 import DeploymentTrust from '../components/DeploymentTrust';
 import RiskReducers from '../components/RiskReducers';
 
@@ -28,6 +29,7 @@ export default function Home() {
       <ExplainabilitySection />
       <WhyEmbedded />
       <ComparisonSection />
+      <BusinessModel />
       <DeploymentTrust />
       <RiskReducers />
     </>
