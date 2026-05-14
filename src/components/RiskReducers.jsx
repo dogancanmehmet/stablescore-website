@@ -4,23 +4,23 @@ import { useState } from 'react';
 const faqs = [
   {
     question: 'How long does it take to connect to our ERP?',
-    answer: 'Most integrations are completed within 2–5 business days. We support native connectors for SAP, Oracle, Microsoft Dynamics, and many local ERP systems. For custom systems, we use APIs or webhooks.',
+    answer: 'Most integrations proceed through a structured onboarding process. We support native connectors for major ERP systems and custom integrations via APIs or structured data exports.',
   },
   {
     question: 'Will it work with our existing tech stack?',
-    answer: 'Yes. StableScore integrates with ERP, WMS, CRM, BI tools, and data warehouses. We also support Excel and CSV uploads as a starting point. If your system is not on the list, we can build a custom integration.',
+    answer: 'StableScore integrates with ERP, WMS, CRM, BI tools, and data warehouses. We also support Excel and CSV uploads as a starting point. If your system is not on the list, we can build a custom integration.',
   },
   {
     question: 'How much historical data do we need?',
-    answer: 'A minimum of 3–6 months of historical stock, sales, and operational data is sufficient for the AI to learn baseline patterns. More data improves precision, but you can start seeing value within weeks.',
+    answer: 'A minimum of 3–6 months of historical stock, sales, and operational data is sufficient for the AI to learn baseline patterns. More data improves precision, but you can start seeing signals within weeks.',
   },
   {
     question: 'Is our data safe? We have strict compliance requirements.',
-    answer: 'Data security is our top priority. We apply enterprise-grade encryption in transit and at rest, and are fully GDPR and EU AI Act aligned. Private Cloud and On-Premise deployment options are available. Your data is never sold or shared.',
+    answer: 'Data security is a core design principle. We apply enterprise-grade encryption in transit and at rest. Private Cloud and On-Premise deployment options are available for organizations with specific compliance requirements. Your data is never sold or shared.',
   },
   {
     question: 'How does the AI explain its decisions?',
-    answer: 'Every recommendation includes context: what signal was detected, why it matters, and what the expected impact is. For example, next to "Reorder 500 units of product XYZ" you will see: "Demand increased 40% in the last 30 days, current stock covers 12 days, lead time is 14 days."',
+    answer: 'Every recommendation includes context: what signal was detected, why it matters, and what the expected impact is. For example, next to a reorder recommendation you will see: demand trend, current stock coverage, and lead time gap.',
   },
   {
     question: 'What deployment options do you offer?',
@@ -29,10 +29,10 @@ const faqs = [
 ];
 
 const guarantees = [
-  'No-code ERP connection in days, not months',
+  'Structured onboarding process for ERP integration',
   'Explainable recommendations with root-cause context',
   'Human-in-the-loop approval on every action',
-  'GDPR and EU AI Act aligned by design',
+  'Private deployment options available',
   'Your data stays yours — full portability',
 ];
 

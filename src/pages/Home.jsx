@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import TractionBar from '../components/TractionBar';
 import TrustBar from '../components/TrustBar';
 import ProblemSection from '../components/ProblemSection';
 import SolutionSection from '../components/SolutionSection';
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TractionBar />
       <TrustBar />
       <ProblemSection />
       <SolutionSection />

@@ -1,31 +1,24 @@
-import { Quote, Building2, Users, TrendingUp } from 'lucide-react';
+import { Quote, Building2, Factory, Landmark } from 'lucide-react';
 
-const testimonials = [
+const scenarios = [
   {
-    quote: 'StableScore gave us something we never had before: a clear, ranked list of what to fix before it impacts our revenue. The explainability is what convinced our leadership team.',
-    author: 'Thomas Weber',
-    role: 'Head of Operations',
-    company: 'Mid-sized Manufacturing Company',
+    context: 'Illustrative scenario — FMCG Distribution',
+    quote: 'Instead of waiting for weekly reports, the team now sees which product groups are at risk of stock-out across warehouses, with root-cause context on demand shifts and lead-time gaps.',
+    role: 'Operations team perspective',
     icon: Building2,
   },
   {
-    quote: 'We connected our ERP in two days. Within the first month, we had identified €800K in dead stock and procurement inefficiencies we did not know existed.',
-    author: 'Anna Müller',
-    role: 'Supply Chain Director',
-    company: 'European Distribution Firm',
-    icon: Users,
+    context: 'Illustrative scenario — Manufacturing',
+    quote: 'Procurement went from collecting supplier offers across files and emails to having structured comparisons with decision-relevant differences highlighted for review.',
+    role: 'Procurement team perspective',
+    icon: Factory,
   },
   {
-    quote: 'Our investors specifically asked for operational intelligence. StableScore gave us a data-driven decision layer that makes our operational maturity visible and defensible.',
-    author: 'Marcus Chen',
-    role: 'COO',
-    company: 'Mid-market Financial Services',
-    icon: TrendingUp,
+    context: 'Illustrative scenario — Regulated Environment',
+    quote: 'Sensitive operational data stays within the company infrastructure while the team gets structured signal detection and explainable review workflows.',
+    role: 'Compliance team perspective',
+    icon: Landmark,
   },
-];
-
-const logos = [
-  'Manufacturing Co.', 'FMCG Distributor', 'Financial Services', 'Retail Group', 'Logistics Partner', 'Healthcare Supplier',
 ];
 
 export default function SocialProof() {
@@ -36,45 +29,33 @@ export default function SocialProof() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">TRUSTED BY OPERATIONAL TEAMS</p>
+          <p className="text-xs font-semibold text-accent-light uppercase tracking-wider mb-3">USE CASE SCENARIOS</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight">
-            What mid-sized companies say.
+            How operational teams use StableScore.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((t) => (
+        <div className="grid md:grid-cols-3 gap-6">
+          {scenarios.map((s) => (
             <div
-              key={t.author}
+              key={s.context}
               className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 md:p-8 flex flex-col"
             >
-              <Quote size={24} className="text-accent-light mb-4" />
-              <p className="text-base text-white leading-relaxed mb-6 flex-1">
-                "{t.quote}"
+              <div className="flex items-center gap-2 mb-4">
+                <s.icon size={18} className="text-accent-light" strokeWidth={1.5} />
+                <span className="text-[10px] font-semibold text-accent-light uppercase tracking-wider">
+                  {s.context}
+                </span>
+              </div>
+              <Quote size={20} className="text-accent-light/60 mb-3" />
+              <p className="text-sm text-white leading-relaxed mb-6 flex-1">
+                {s.quote}
               </p>
-              <div className="pt-5 border-t border-white/10">
-                <p className="text-sm font-semibold text-white">{t.author}</p>
-                <p className="text-xs text-gray-400">{t.role}</p>
-                <p className="text-xs text-gray-500">{t.company}</p>
+              <div className="pt-4 border-t border-white/10">
+                <p className="text-xs text-gray-400">{s.role}</p>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="border-t border-white/10 pt-8">
-          <p className="text-center text-xs text-gray-400 uppercase tracking-wider mb-6">
-            Companies across industries trust StableScore
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-            {logos.map((logo) => (
-              <div
-                key={logo}
-                className="px-4 py-2 bg-white/5 rounded-lg text-sm text-gray-300 font-medium"
-              >
-                {logo}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

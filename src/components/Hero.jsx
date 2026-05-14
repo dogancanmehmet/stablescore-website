@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, AlertTriangle, Search, FileText, ThumbsUp, Shield } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -32,14 +32,14 @@ export default function Hero() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-muted">
-              Built for operational teams at mid-sized companies across Europe.
+              Built for mid-sized FMCG distributors and operational companies using ERP systems.
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute -top-3 left-4 z-10">
               <span className="px-2.5 py-1 bg-navy-900 text-white text-[10px] font-medium rounded-md shadow-sm">
-                Example operational cockpit
+                Example decision card
               </span>
             </div>
             <div className="bg-white rounded-xl shadow-2xl border border-border overflow-hidden">
@@ -69,63 +69,94 @@ export default function Hero() {
                 </div>
                 <div className="flex-1 p-5">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-sm font-semibold text-navy-900">Overview</h3>
+                    <h3 className="text-sm font-semibold text-navy-900">Decision Card</h3>
                     <div className="flex items-center gap-2">
                       <div className="w-4 h-4 rounded-full bg-gray-100" />
                       <div className="w-4 h-4 rounded-full bg-gray-100" />
                       <div className="w-6 h-6 rounded-full bg-accent/10 text-accent text-[10px] flex items-center justify-center font-bold">A</div>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 mb-4">
-                    {[
-                      { label: 'At Risk Revenue', value: '€2.4M', change: '+16% vs last 30 days', color: 'text-red-500' },
-                      { label: 'Stock-out Risk', value: '215', change: '+23%', color: 'text-red-500' },
-                      { label: 'Dead Stock Value', value: '€1.7M', change: '-11%', color: 'text-green-500' },
-                      { label: 'Missed Sales (Est.)', value: '€890K', change: '+16%', color: 'text-red-500' },
-                    ].map((stat) => (
-                      <div key={stat.label} className="bg-bg-light rounded-lg p-3">
-                        <p className="text-[10px] text-muted uppercase tracking-wide">{stat.label}</p>
-                        <p className="text-lg font-bold text-navy-900 mt-1">{stat.value}</p>
-                        <p className={`text-[10px] mt-0.5 ${stat.color}`}>{stat.change}</p>
+
+                  {/* Decision Card */}
+                  <div className="bg-red-50 border border-red-100 rounded-xl p-4 mb-4">
+                    <div className="flex items-start gap-3 mb-3">
+                      <div className="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center flex-shrink-0">
+                        <AlertTriangle size={16} className="text-red-600" />
                       </div>
-                    ))}
-                  </div>
-                  <div className="bg-bg-light rounded-lg p-3 mb-3">
-                    <p className="text-[10px] text-muted uppercase tracking-wide mb-2">Risk Exposure Over Time</p>
-                    <div className="h-16 flex items-end gap-1">
-                      {[40, 55, 45, 60, 50, 70, 55, 65, 75, 60, 50, 55].map((h, i) => (
-                        <div key={i} className="flex-1 bg-accent/20 rounded-sm" style={{ height: `${h}%` }} />
-                      ))}
+                      <div>
+                        <p className="text-xs font-semibold text-red-700 uppercase tracking-wide">High Priority Risk</p>
+                        <p className="text-sm font-bold text-navy-900">Stock-out exposure in Product Group XYZ</p>
+                      </div>
                     </div>
-                    <div className="flex justify-between mt-1 text-[9px] text-muted">
-                      <span>Apr 15</span>
-                      <span>Apr 22</span>
-                      <span>Apr 29</span>
-                      <span>May 6</span>
-                      <span>May 13</span>
+                    <div className="grid grid-cols-2 gap-2 mb-3">
+                      <div className="bg-white/60 rounded-lg p-2.5">
+                        <p className="text-[9px] text-muted uppercase tracking-wide">Financial Impact</p>
+                        <p className="text-sm font-bold text-navy-900">€240K est. revenue at risk</p>
+                      </div>
+                      <div className="bg-white/60 rounded-lg p-2.5">
+                        <p className="text-[9px] text-muted uppercase tracking-wide">Time to Impact</p>
+                        <p className="text-sm font-bold text-navy-900">8 days</p>
+                      </div>
+                    </div>
+                    <div className="space-y-1.5 mb-3">
+                      <div className="flex items-center gap-2">
+                        <Search size={12} className="text-red-500 flex-shrink-0" />
+                        <p className="text-[11px] text-navy-800"><strong>Root cause:</strong> Demand increased 34% vs forecast; current stock covers 12 days; supplier lead time is 18 days.</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <FileText size={12} className="text-red-500 flex-shrink-0" />
+                        <p className="text-[11px] text-navy-800"><strong>Contributing signals:</strong> 3 SKUs below safety stock; 2 suppliers with extended lead times.</p>
+                      </div>
+                    </div>
+                    <div className="bg-white rounded-lg p-3">
+                      <p className="text-[9px] text-muted uppercase tracking-wide mb-1.5">Recommended Action</p>
+                      <div className="flex items-center justify-between">
+                        <p className="text-sm font-semibold text-navy-900">Emergency reorder 1,200 units</p>
+                        <span className="px-2 py-0.5 bg-accent/10 text-accent text-[10px] font-semibold rounded-full">Confidence: 87%</span>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex gap-3">
-                    <div className="flex-1 bg-bg-light rounded-lg p-3">
-                      <p className="text-[10px] text-muted uppercase tracking-wide mb-2">Recommended Actions</p>
+
+                  {/* Approval row */}
+                  <div className="flex items-center gap-3 bg-bg-light rounded-lg p-3 mb-3">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center">
+                        <Shield size={12} className="text-amber-600" />
+                      </div>
+                      <span className="text-[10px] text-navy-800 font-medium">Pending approval</span>
+                    </div>
+                    <div className="flex-1 h-px bg-border" />
+                    <div className="flex items-center gap-2">
+                      <button className="px-3 py-1.5 bg-white border border-border rounded-md text-[10px] font-medium text-muted hover:bg-bg-light transition-colors">
+                        Review
+                      </button>
+                      <button className="px-3 py-1.5 bg-accent text-white rounded-md text-[10px] font-medium hover:bg-accent-light transition-colors flex items-center gap-1">
+                        <ThumbsUp size={10} />
+                        Approve
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Secondary cards */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-bg-light rounded-lg p-3">
+                      <p className="text-[9px] text-muted uppercase tracking-wide mb-2">Watchlist</p>
                       <div className="space-y-2">
-                        {['Reorder XYZ product group', 'Reduce overstock in 8 SKUs', 'Review supplier lead time'].map((action) => (
-                          <div key={action} className="flex items-center gap-2">
-                            <div className="w-1 h-1 rounded-full bg-accent" />
-                            <span className="text-[10px] text-navy-800">{action}</span>
+                        {['Dead stock: €45K', 'Supplier delay: 2 days'].map((item) => (
+                          <div key={item} className="flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                            <span className="text-[10px] text-navy-800">{item}</span>
                           </div>
                         ))}
                       </div>
-                      <p className="text-[10px] text-accent mt-2">See all recommendations →</p>
                     </div>
-                    <div className="w-28 bg-bg-light rounded-lg p-3">
-                      <p className="text-[10px] text-muted uppercase tracking-wide mb-2">System Status</p>
+                    <div className="bg-bg-light rounded-lg p-3">
+                      <p className="text-[9px] text-muted uppercase tracking-wide mb-2">System Status</p>
                       <div className="flex items-center gap-1.5">
                         <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                        <span className="text-[10px] text-navy-800">All systems operational</span>
+                        <span className="text-[10px] text-navy-800">Monitoring active</span>
                       </div>
-                      <p className="text-[9px] text-muted mt-2">Updated 15 min ago</p>
-                      <p className="text-[9px] text-muted">12 data sources connected</p>
+                      <p className="text-[9px] text-muted mt-1">8 data sources connected</p>
                     </div>
                   </div>
                 </div>

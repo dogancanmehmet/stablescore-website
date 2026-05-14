@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Cloud, Shield, Server, Users, Brain, FileCheck, ArrowRight, Clock, Lock, Gauge } from 'lucide-react';
+import { Cloud, Shield, Server, Users, Brain, FileCheck, ArrowRight, Lock, Gauge, Eye } from 'lucide-react';
 
 const features = [
   { icon: Cloud, label: 'SaaS' },
@@ -13,24 +13,23 @@ const features = [
 export default function DeploymentTrust() {
   return (
     <section className="w-full bg-bg-light py-16 md:py-24 relative overflow-hidden">
-      {/* Soft gradient blob */}
       <div className="absolute top-[40%] right-[-5%] w-[350px] h-[350px] rounded-full bg-green-400/[0.04] blur-[100px] pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">TRUST & COMPLIANCE</p>
+            <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">TRUST & CONTROL</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight mb-6">
-              Bank-grade security, SMB speed.
+              Designed for controlled enterprise environments.
             </h2>
             <p className="text-base text-muted leading-relaxed mb-8">
-              GDPR and EU AI Act aligned, with end-to-end encryption and full data sovereignty. Your data is never sold or shared with third parties.
+              Built with data control, explainability and operational continuity in mind. Private cloud and on-premise options available for organizations with specific compliance and sovereignty requirements.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               {[
-                { icon: Lock, title: 'Data Sovereignty', desc: 'You fully own your data' },
-                { icon: Gauge, title: 'GDPR Aligned', desc: 'Full EU data law compliance' },
-                { icon: Clock, title: '99.9% Uptime', desc: 'SLA guarantee' },
-                { icon: Shield, title: 'Privacy First', desc: 'Never sold or shared' },
+                { icon: Lock, title: 'Data Control', desc: 'You retain ownership of your operational data' },
+                { icon: Eye, title: 'Explainable by Design', desc: 'Every signal includes context and reasoning' },
+                { icon: Gauge, title: 'Reliable Infrastructure', desc: 'Built for continuous operational monitoring' },
+                { icon: Shield, title: 'Privacy First', desc: 'Not sold, not shared, not used to train external models' },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
                   <div className="w-9 h-9 rounded-lg bg-white border border-border flex items-center justify-center flex-shrink-0">
@@ -59,8 +58,8 @@ export default function DeploymentTrust() {
                 <Shield size={16} className="text-white" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-navy-900">Investor-Ready Security</p>
-                <p className="text-xs text-muted">Pass due diligence security checklists in one go.</p>
+                <p className="text-sm font-semibold text-navy-900">Deployment-Ready Security</p>
+                <p className="text-xs text-muted">Designed for due diligence and controlled environments.</p>
               </div>
             </div>
             <h3 className="text-xl font-bold text-navy-900 mb-2">
@@ -73,7 +72,7 @@ export default function DeploymentTrust() {
               to="/demo"
               className="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium px-6 py-3 rounded-lg hover:bg-accent-light transition-colors"
             >
-              Get Free Demo
+              Request a Demo
               <ArrowRight size={16} />
             </Link>
           </div>
