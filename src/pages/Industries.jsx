@@ -81,28 +81,30 @@ const industries = [
   {
     icon: Stethoscope,
     name: 'Healthcare',
-    shortDesc: 'Ensure critical supply availability and reduce waste.',
-    longDesc: 'Hospitals and pharmaceutical distributors prevent critical supply shortages while minimizing expired inventory.',
+    shortDesc: 'Support supply planning and inventory visibility in care environments.',
+    longDesc: 'In healthcare environments, decision intelligence can support supply planning and inventory visibility where operational data is available.',
     useCases: [
-      'Critical supply shortage prevention',
-      'Expiry risk management',
-      'Supplier reliability scoring',
-      'Regulatory compliance tracking',
+      'Supply planning support',
+      'Inventory visibility',
+      'Demand pattern review',
+      'Operational data consolidation',
     ],
-    metric: 'Higher critical stock availability and reduced waste',
+    metric: 'Improved visibility into operational data',
+    potential: true,
   },
   {
     icon: FlaskConical,
     name: 'Pharma',
-    shortDesc: 'Manage batch-level inventory and cold chain risks.',
-    longDesc: 'Pharmaceutical companies track batch-level inventory, manage cold chain deviations, and ensure regulatory traceability.',
+    shortDesc: 'Support inventory visibility and operational traceability where applicable.',
+    longDesc: 'In pharmaceutical operations, decision intelligence can support inventory tracking and operational data review subject to applicable regulatory frameworks.',
     useCases: [
-      'Batch-level inventory tracking',
-      'Cold chain deviation alerts',
-      'Regulatory traceability',
-      'API shortage prediction',
+      'Inventory tracking support',
+      'Operational data review',
+      'Demand deviation detection',
+      'Cross-system data consolidation',
     ],
-    metric: 'Reduced batch waste and compliance risk',
+    metric: 'Improved operational data visibility',
+    potential: true,
   },
   {
     icon: Zap,
@@ -170,7 +172,7 @@ export default function Industries() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
-              Trusted across industries.
+              Applicable across operational environments.
             </h2>
             <p className="mt-4 text-base text-muted leading-relaxed">
               See how mid-sized companies in your sector use StableScore to drive measurable outcomes.
@@ -186,7 +188,14 @@ export default function Industries() {
                 <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                   <ind.icon size={22} className="text-accent" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-base font-semibold text-navy-900 mb-1">{ind.name}</h3>
+                <div className="flex items-center gap-2 mb-1">
+                  <h3 className="text-base font-semibold text-navy-900">{ind.name}</h3>
+                  {ind.potential && (
+                    <span className="px-2 py-0.5 bg-amber-100 text-amber-700 text-[10px] font-semibold uppercase tracking-wider rounded-full">
+                      Potential
+                    </span>
+                  )}
+                </div>
                 <p className="text-sm text-muted leading-relaxed mb-4 flex-1">{ind.shortDesc}</p>
                 <div className="pt-4 border-t border-border">
                   <p className="text-sm font-semibold text-accent">{ind.metric}</p>

@@ -72,7 +72,7 @@ const steps = [
   {
     icon: Database,
     title: 'Connect',
-    desc: 'Integrate ERP, CRM, WMS, and spreadsheets in under one week.',
+    desc: 'Integrate with ERP, CRM, WMS and spreadsheets through a structured onboarding process.',
   },
   {
     icon: Brain,
@@ -303,7 +303,7 @@ export default function Solutions() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <p className="text-xs font-semibold text-accent uppercase tracking-wider mb-3">INDUSTRIES</p>
             <h2 className="text-3xl sm:text-4xl font-bold text-navy-900 leading-tight">
-              Trusted across industries.
+              Applicable across operational environments.
             </h2>
             <p className="mt-4 text-base text-muted leading-relaxed">
               StableScore adapts to the unique operational challenges of every sector.
